@@ -1,10 +1,14 @@
-https://github.com/Tunar123123/Tunu1.git# Tunu1
-Hi! I'm Tunu!
-www.youtube.com/@TunuSpark
-https://sites.google.com/view/TunuSpark
-TunuSpark
-print ("Hello everyone!")
-drive // (123)
-sprict ("SLM Mən Tunu!")
-Buradan baxın: @TunuSpark
-(Özəl Təşəkkürlər)
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mənim Səhifəm</title>
+</head>
+<body>
+
+    <h1>Salam, GitHub!</h1>
+    <p>Bu, mənim ilk HTML kodumdur.</p>
+
+</body>
+</html>
