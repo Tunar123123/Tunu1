@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Semantik Tapşırıq</title>
+    <style>
+        /* Bonus: Cədvələ border əlavə edilməsi */
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mənim Veb Səhifəm</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana səhifə</a></li>
+            <li><a href="#about">Haqqımızda</a></li>
+            <li><a href="#contact">Əlaqə</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>İstifadəçi Məlumatları</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Yaş</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tunar</td>
+                    <td>İsmayılov</td>
+                    <td>15</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 20px;">
+            <img src="https://via.placeholder.com/150" alt="HTML öyrənmək üçün vizual dəstək">
+        </div>
+    </section>
+
+    <article id="about">
+        <h2>HTML nədir?</h2>
+        <p>
+            HTML (HyperText Markup Language) veb səhifələrin strukturunu yaratmaq üçün istifadə olunan standart nişanlama dilidir. 
+            O, elementlər və teqlər vasitəsilə mətni, şəkilləri və digər media növlərini brauzerdə təşkil edir.
+        </p>
+    </article>
+
+    <footer>
+        <p>&copy; 2024 Müəllif: Sizin Adınız</p>
+    </footer>
+
+</body>
+</html>
