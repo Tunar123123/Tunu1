@@ -2,66 +2,111 @@
 <html lang="az">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Semantik Tapşırıq</title>
+    <title>Tunarın Şəxsi Formu</title>
     <style>
-        /* Bonus: Cədvələ border əlavə edilməsi */
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 8px;
+        /* Səliqəli görünməsi üçün əlavə etdiyim fərdi dizayn */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif; 
+            background-color: #fcfcfc; 
+            padding: 30px; 
         }
+
+        .tunar-form-qutu { 
+            background: #ffffff; 
+            border: 2px solid #34495e; 
+            padding: 20px; 
+            width: 380px; 
+            border-radius: 12px;
+            box-shadow: 5px 5px 0px #34495e; /* Standart olmayan kölgə stili */
+        }
+
+        .tunar-setir { margin-bottom: 12px; }
+
+        .tunar-setir label { 
+            font-weight: bold; 
+            display: block; 
+            color: #2c3e50; 
+            margin-bottom: 3px;
+        }
+
+        .tunar-input { 
+            width: 95%; 
+            padding: 8px; 
+            border: 1px solid #7f8c8d; 
+            border-radius: 4px; 
+        }
+
+        /* Düymələri yan-yana qoymaq üçün */
+        .tunar-duymeler { margin-top: 20px; }
+        
+        .gonder-btn { background-color: #27ae60; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; }
+        .temizle-btn { background-color: #c0392b; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; margin-left: 5px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Mənim Veb Səhifəm</h1>
-    </header>
+<div class="tunar-form-qutu">
+    <h3 style="margin-top: 0; color: #34495e;">Qeydiyyat Bölməsi</h3>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana səhifə</a></li>
-            <li><a href="#about">Haqqımızda</a></li>
-            <li><a href="#contact">Əlaqə</a></li>
-        </ul>
-    </nav>
-
-    <section>
-        <h2>İstifadəçi Məlumatları</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Ad</th>
-                    <th>Soyad</th>
-                    <th>Yaş</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Tunar</td>
-                    <td>İsmayılov</td>
-                    <td>15</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div style="margin-top: 20px;">
-            <img src="https://via.placeholder.com/150" alt="HTML öyrənmək üçün vizual dəstək">
+    <form>
+        <div class="tunar-setir">
+            <label for="ad_sahesi">Ad:</label>
+            <input type="text" id="ad_sahesi" class="tunar-input" value="Tunar">
         </div>
-    </section>
 
-    <article id="about">
-        <h2>HTML nədir?</h2>
-        <p>
-            HTML (HyperText Markup Language) veb səhifələrin strukturunu yaratmaq üçün istifadə olunan standart nişanlama dilidir. 
-            O, elementlər və teqlər vasitəsilə mətni, şəkilləri və digər media növlərini brauzerdə təşkil edir.
-        </p>
-    </article>
+        <div class="tunar-setir">
+            <label for="email_sahesi">Email:</label>
+            <input type="email" id="email_sahesi" class="tunar-input" value="sekertamara@gmail.com">
+        </div>
 
-    <footer>
-        <p>&copy; 2024 Müəllif: Sizin Adınız</p>
-    </footer>
+        <div class="tunar-setir">
+            <label for="sifre_sahesi">Şifrə:</label>
+            <input type="password" id="sifre_sahesi" class="tunar-input" value="72440615">
+        </div>
+
+        <div class="tunar-setir">
+            <label for="yas_sahesi">Yaş:</label>
+            <input type="number" id="yas_sahesi" class="tunar-input" value="13">
+        </div>
+
+        <div class="tunar-setir">
+            <label for="tarix_sahesi">Doğum tarixi:</label>
+            <input type="date" id="tarix_sahesi" class="tunar-input" value="2012-11-17">
+        </div>
+
+        <div class="tunar-setir">
+            <label for="haqqinda_sahesi">Haqqında:</label>
+            <textarea id="haqqinda_sahesi" class="tunar-input" rows="3">Hi! I'm Tunu!</textarea>
+        </div>
+
+        <hr>
+
+        <div class="tunar-setir">
+            <label>Şəhər seçimi:</label>
+            <input type="checkbox" id="city1" checked> <label for="city1" style="display:inline; font-weight:normal;">Göygöl</label><br>
+            <input type="checkbox" id="city2"> <label for="city2" style="display:inline; font-weight:normal;">Bakı</label><br>
+            <input type="checkbox" id="city3"> <label for="city3" style="display:inline; font-weight:normal;">Gəncə</label>
+        </div>
+
+        <div class="tunar-setir">
+            <label>Cins:</label>
+            <input type="radio" name="cins" id="kisi" checked> <label for="kisi" style="display:inline; font-weight:normal;">Kişi</label>
+            <input type="radio" name="cins" id="qadin"> <label for="qadin" style="display:inline; font-weight:normal;">Qadın</label>
+        </div>
+
+        <div class="tunar-setir">
+            <label>Maraqlar:</label>
+            <input type="checkbox" id="m1" checked> <label for="m1" style="display:inline; font-weight:normal;">Biznes işlədmək</label><br>
+            <input type="checkbox" id="m2" checked> <label for="m2" style="display:inline; font-weight:normal;">Məlumat örgənmək</label><br>
+            <input type="checkbox" id="m3" checked> <label for="m3" style="display:inline; font-weight:normal;">Yaradıcı olmaq</label>
+        </div>
+
+        <div class="tunar-duymeler">
+            <button type="submit" class="gonder-btn">Göndər</button>
+            <button type="reset" class="temizle-btn">Təmizlə</button>
+        </div>
+    </form>
+</div>
 
 </body>
 </html>
